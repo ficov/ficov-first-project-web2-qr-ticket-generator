@@ -2,13 +2,14 @@ const express = require('express')
 const { auth } = require('express-openid-connect');
 require('dotenv').config();
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000;
+const externalUrl = process.env.RENDER_EXTERNAL_URL;
 
 const config = {
     authRequired: false,
     auth0Logout: true,
     secret: process.env.SECRET,
-    baseURL: 'http://localhost:4000',
+    baseURL: externalUrl || `http://localhost:${port}`,
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     issuerBaseURL: 'https://dev-kel58uh4kappi7z3.us.auth0.com',
