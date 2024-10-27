@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+</head>
+<body>
+    <h1>Logged user: <%= username  %></h1>
+    <h1>Vatin: <%= ticket.vatin  %></h1>
+    <h1>Name: <%= ticket.firstName  %></h1>
+    <h1>Last name:<%= ticket.lastName  %></h1>
+    <h1>Created: <%= dateCreated.getDate() %>/<%= dateCreated.getMonth()+1 %>/<%= dateCreated.getFullYear()  %> </h1>
+    <h1>Hours: <%= dateCreated.getHours()+2 %> Minutes: <%= dateCreated.getMinutes() %> Seconds:<%= dateCreated.getSeconds() %></h1>
+</body>
+</html>
